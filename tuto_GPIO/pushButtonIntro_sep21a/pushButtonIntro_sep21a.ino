@@ -6,7 +6,7 @@
   C'est du python, mais avec plus de parenthseses :)
 */
 
-int ledRouge = 4; // En C, lorsqu'on crée un objet, il faut définir son type
+int ledRouge = 4; // En C, lorsqu'on instantie une variable, il faut définir son type
 int ledJaune = 5; // Remarquez que le chiffre est celui de la connection sur le board
 int ledVerte = 6; // <--toujours mettre un ";" a la fin de la ligne
 
@@ -27,8 +27,11 @@ void setup()
   Serial.begin(9600);
 }
 
-void loop() // cette fonction se rappelle quand elle a terminé: c'est une boucle
-{
+/*
+ * QUESTION aile de poulet : Trouvez un bug potentiel dans la loop suivante (indice : bouton)
+ */
+
+void loop() // cette fonction est une boucle infinie
   if (digitalRead(push) == HIGH)
   {
     digitalWrite(ledRouge, HIGH); 
