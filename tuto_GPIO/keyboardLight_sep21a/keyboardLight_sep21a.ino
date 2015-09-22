@@ -26,7 +26,8 @@
      
      if (inChar)
      {
-       Serial.println("MAGIE!"); //cliquer sur l'icone en haut a droite
+       Serial.println("MAGIE! **~\('-')/~**"); //cliquer sur l'icone en haut a droite
+       
        
        if (inChar == 'x') //si le message envoyé est la touche x, on allume la led rouge
        {
@@ -41,6 +42,7 @@
        
        digitalWrite(ledJaune, LOW);
        digitalWrite(ledRouge, LOW); // Pour éteindre les leds
+       
      }
    }
  }

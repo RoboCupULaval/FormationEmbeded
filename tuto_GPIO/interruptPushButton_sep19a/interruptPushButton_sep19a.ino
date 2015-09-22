@@ -6,7 +6,7 @@ int ledRouge = 4; // Remarquer que le chiffre est celui de la connection
 int ledJaune = 5;
 int ledVerte = 6;
 
-volatile int state = HIGH; //#Alexandra: pourquoi Volatile? explique le ici, => les variables volatiles sont une feature du C/C++ un peu difficile à comprendre sur le coup, je t'invite à faire des recherches et bien comprendre leurs engagement :)
+volatile int state = HIGH; //Pourquoi Volatile? C'est une notion avancé en C/C++. Elle sert a corriger une possible mais tres peu probable erreur d'optimisation.
 
 void setup()
 {
@@ -18,10 +18,20 @@ void setup()
 
   //Initialise l'interupte de la pin "pushSens". Lorsque l'interupt est lancé, il va executer la fonction changeSens!
   attachInterrupt(pushSens, changeSens, LOW);
-
-  //Commence la communication serial a 9600 bits/sec
-  Serial.begin(9600);
 }
+
+void changeSens()
+{
+  // inverse les états des leds
+  //Les fonctions d'un interrupt doivent respecter 2 regles:
+  // - Ne recoit rien (aucun argument)
+  // - Ne retourne rien (fonction void)
+  state = !state;
+}
+
+/*
+ * Question aile de poulet! : Trouvez moi les dangers d'utilisation d'interupts! (3 ailes par danger) (pas plus de 3 ailes par personnes qui en trouve) (2 réponses acceptés)
+ */
 
 void loop()
 {
@@ -45,16 +55,4 @@ void loop()
   delay(1000);
 }
 
-/*
- * Question aile de poulet! : Trouvez moi les dangers d'utilisation d'interupts! (3 ailes par danger) (pas plus de 3 ailes par personnes qui en trouve) (2 réponses acceptés)
- */
-
-void changeSens()
-{
-  // inverse les états des leds
-  //Les fonctions d'un interrupt doivent respecter 2 regles:
-  // - Ne recoit rien (aucun argument)
-  // - Ne retourne rien (fonction void)
-  state = !state;
-}
 

@@ -22,9 +22,6 @@ void setup()
   pinMode(ledRouge, OUTPUT);
   pinMode(ledJaune, OUTPUT);
   pinMode(ledVerte, OUTPUT);
-  
-  //Commence la communication serial a 9600 bits/sec
-  Serial.begin(9600);
 }
 
 /*
