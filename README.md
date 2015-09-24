@@ -6,4 +6,4 @@ Embeded system training with Arduino
 - C++ Introduction
 - Serial Basics
 - GPIO Basics
-
+- Be awesome
