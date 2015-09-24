@@ -1,3 +1,9 @@
-# FormationEmbeded
-Code de Formation bas-niveau (Arduino)
+# Embeded Formations
+Embeded system training with Arduino
+
+##Cours:
+- Arduino IDE
+- C++ Introduction
+- Serial Basics
+- GPIO Basics
 
