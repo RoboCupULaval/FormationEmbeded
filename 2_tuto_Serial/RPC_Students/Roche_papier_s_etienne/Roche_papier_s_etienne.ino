@@ -46,6 +46,20 @@ void loop() {
         Serial.println("egalite");
         counterDraw++;
        }
+/*
+       switch (RandInt)  // Here you could use a switch case statement ;)
+       {
+        case 2:
+          // statements
+          break;
+        case 1:
+          // statements
+          break;
+        default:
+          // statements
+        break;
+      }
+*/
     }
 
     if (inInt == 49)
