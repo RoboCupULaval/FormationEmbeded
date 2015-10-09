@@ -1,0 +1,18 @@
+Si vous lisez ce message et que vous êtes dans l'équipe jdwy, c'est que vous avez bien configuré votre git!
+
+Chose à faire pour la prochaine rencontre du 15 octobre. (Équipe jdwy)
+
+1 -   Pour les gens en GEL. Regarder le plan électrique et le comprendre.
+2 -   Pour Yao, Créer une structure LED (elle devrait contenir au minimun un entier pour la pin and maybe something else)
+	(voir les exemples) créer la structure dans un fichier nommé Led.h
+
+3 -   Pour Daniel, Créer une structure Boutton (voir exemple comme guideline) (dans un fichier Bouton.h)
+
+4 -    Wiliam, lire un peu de doc sur Terminal, git, C, Arduino
+
+5 -	Pour tout le monde qui ce sente (up to the chalenge) codé le code pour faire alumer
+	la Led en apuyant sur le boutton.   (nous prendrons la solution la plus cool)
+
+6 -   Pour tout le monde : rester cool.
+
+  
