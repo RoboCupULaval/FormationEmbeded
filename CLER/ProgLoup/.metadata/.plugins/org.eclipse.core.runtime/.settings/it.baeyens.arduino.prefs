@@ -1,0 +1,11 @@
+Arduino\ Board=Arduino/Genuino Uno
+Arduino\ Custom\ Option\ Selections=
+Arduino\ IDE\ Version=1.6.5-r5
+Arduino\ Path=/usr/share/arduino-1.6.5-r5
+Arduino\ Port=/dev/ttyACM0/
+Arduino\ boards\ file=/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/boards.txt
+FsStatus=3
+FuStatub=2
+Private\ Library\ Path=/usr/share/arduino-1.6.5-r5/libraries
+Private\ hardware\ Path=/usr/share/arduino-1.6.5-r5/hardware
+eclipse.preferences.version=1

@@ -1,0 +1,24 @@
+17:42:21 **** Build of configuration Release for project RobotCLER ****
+make all 
+Building file: /usr/share/arduino-1.6.5-r5/libraries/Robot_Control/src/utility/Adafruit_GFX.cpp
+Starting C++ compile
+"/bin/avr-g++" -c -g -Os -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=165-r5 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/cores/arduino" -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/variants/standard" -I"/usr/share/arduino-1.6.5-r5/libraries/Robot_Control" -I"/usr/share/arduino-1.6.5-r5/libraries/Robot_Control/src" -MMD -MP -MF"Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.d" -MT"Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.d" -D__IN_ECLIPSE__=1 -x c++ "/usr/share/arduino-1.6.5-r5/libraries/Robot_Control/src/utility/Adafruit_GFX.cpp"  -o  "Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.o"   -Wall
+/bin/sh: 1: /bin/avr-g++: not found
+Libraries/Robot_Control/src/utility/subdir.mk:24: recipe for target 'Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.o' failed
+make: *** [Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.o] Error 127
+16:53:41 **** Build of configuration Release for project TestPhoto ****
+make all 
+Building file: ../.ino.cpp
+Starting C++ compile
+"/bin/avr-g++" -c -g -Os -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=165-r5 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/cores/arduino" -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/variants/standard" -I"/usr/share/arduino-1.6.5-r5/libraries/03.Analog" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.d" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"   -Wall
+/bin/sh: 1: /bin/avr-g++: not found
+make: *** [.ino.cpp.o] Error 127
+subdir.mk:24: recipe for target '.ino.cpp.o' failed
+17:14:24 **** Build of configuration Release for project Lesson4Photo ****
+make all 
+Building file: ../.ino.cpp
+/bin/sh: 1: /bin/avr-g++: not found
+Starting C++ compile
+"/bin/avr-g++" -c -g -Os -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=165-r5 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/cores/arduino" -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/variants/standard" -MMD -MP -MF".ino.cpp.d" -MT".ino.cpp.d" -D__IN_ECLIPSE__=1 -x c++ "../.ino.cpp"  -o  ".ino.cpp.o"   -Wall
+subdir.mk:24: recipe for target '.ino.cpp.o' failed
+make: *** [.ino.cpp.o] Error 127

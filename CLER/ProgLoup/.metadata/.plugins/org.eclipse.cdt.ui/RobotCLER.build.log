@@ -1,0 +1,11 @@
+17:42:21 **** Build of configuration Release for project RobotCLER ****
+make all 
+Building file: /usr/share/arduino-1.6.5-r5/libraries/Robot_Control/src/utility/Adafruit_GFX.cpp
+Starting C++ compile
+"/bin/avr-g++" -c -g -Os -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD -mmcu=atmega328p -DF_CPU=16000000L -DARDUINO=165-r5 -DARDUINO_AVR_UNO -DARDUINO_ARCH_AVR     -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/cores/arduino" -I"/usr/share/arduino-1.6.5-r5/hardware/arduino/avr/variants/standard" -I"/usr/share/arduino-1.6.5-r5/libraries/Robot_Control" -I"/usr/share/arduino-1.6.5-r5/libraries/Robot_Control/src" -MMD -MP -MF"Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.d" -MT"Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.d" -D__IN_ECLIPSE__=1 -x c++ "/usr/share/arduino-1.6.5-r5/libraries/Robot_Control/src/utility/Adafruit_GFX.cpp"  -o  "Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.o"   -Wall
+/bin/sh: 1: /bin/avr-g++: not found
+Libraries/Robot_Control/src/utility/subdir.mk:24: recipe for target 'Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.o' failed
+make: *** [Libraries/Robot_Control/src/utility/Adafruit_GFX.cpp.o] Error 127
+
+17:42:21 Build Finished (took 278ms)
+
