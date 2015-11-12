@@ -1,7 +1,5 @@
-int pwm = 3;
-int dir = 6;
-int maximum = 900;
-int minimum = 300;
+int pwm = 3;  //Motor PWM pin
+int dir = 6;  //Motor direction pin
 bool toggle = OUTPUT;
 int currentSpeed = 0;
 
@@ -34,7 +32,7 @@ void loop() {
   
   //Motor Input
   Serial.println("Toggle direction");
-  analogWrite(pwm, currentSpeed); //0 to 1023
+  analogWrite(pwm, currentSpeed); //0 to 1023 to set motor's pwm
   toggle = !toggle;
   digitalWrite(dir, toggle);
   delay(1000);
