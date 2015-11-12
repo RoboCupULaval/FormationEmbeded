@@ -1,7 +1,7 @@
 int pwm = 3;  //Motor PWM pin
 int dir = 6;  //Motor direction pin
-bool toggle = OUTPUT;
-int currentSpeed = 0;
+bool currentDirection = HIGH;
+unsigned int currentSpeed = 0;
 
 void setup() {
   pinMode(dir, OUTPUT);
@@ -16,24 +16,29 @@ void loop() {
    {
      char inChar = (char)Serial.read(); 
      
-     if (inChar == '0') // appuyer sur une touche sur votre clavier
+     if (inChar == 'w') // appuyer sur une touche sur votre clavier
      {
-       currentSpeed = 0;
+       currentSpeed = (currentSpeed + 100) % 1023;
      }
-     else if(inChar == '1')
+     else if(inChar == 's')
      {
-      currentSpeed = 200;
+      currentSpeed = (currentSpeed - 100) % 1023;
      }
-     else if(inChar == '2')
+     else if(inChar == '0')
      {
-      currentSpeed = 900;
+      currentSpeed = 0;
      }
+     else if(inChar == 'a')
+     {
+      currentDirection = HIGH;
+     }
+     else if(inChar == 'd')
+     {
+      currentDirection = LOW;
+     }
+     Serial.print("Current PWM : ");
+     Serial.println(currentSpeed);
+     analogWrite(pwm, currentSpeed); //0 to 1023 to set motor's pwm
+     digitalWrite(dir, currentDirection);
    }
-  
-  //Motor Input
-  Serial.println("Toggle direction");
-  analogWrite(pwm, currentSpeed); //0 to 1023 to set motor's pwm
-  toggle = !toggle;
-  digitalWrite(dir, toggle);
-  delay(1000);
 }
