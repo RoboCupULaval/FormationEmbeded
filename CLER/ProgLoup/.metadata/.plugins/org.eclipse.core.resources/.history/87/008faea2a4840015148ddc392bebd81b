@@ -1,9 +1,7 @@
 //The setup function is called once at startup of the sketch
-const int btnStart = 1;
-const int pinCapt1 = 2;
-const int pinCapt2 = 3;
+int btnStart = 1;
 
-#include "LectureLignes.h"
+#include
 
 void setup()
 {
@@ -13,5 +11,5 @@ void setup()
 
 void loop()
 {
-	lectureLigne(&pinCapt1, &pinCapt2);
+	lectureLignes()
 }

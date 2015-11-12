@@ -8,8 +8,7 @@
 #ifndef LECTURELIGNES_H_
 #define LECTURELIGNES_H_
 
-signed int lectureLigne(int *p_pinPhotoCapteur1, int *p_pinPhotoCapteur2);
-
+signed int lectureLigne(int *p_pinPhotoCapteur1, int *p_pinPhotoCapteur2){};
 
 
 
