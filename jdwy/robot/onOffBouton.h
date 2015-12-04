@@ -15,8 +15,8 @@ struct OnOffBouton {
 };
 
 
-void on_off_button_setup(OnOffBouton bouton, int pin);
+void on_off_button_setup(OnOffBouton& bouton, int pin);
 
-void on_off_button_handleInput(OnOffBouton bouton);
+void on_off_button_handleInput(OnOffBouton& bouton);
 
 #endif

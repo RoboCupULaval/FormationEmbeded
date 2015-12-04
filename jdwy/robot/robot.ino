@@ -18,7 +18,7 @@ void setup() {
   monBouton.callBackOff = maFonctionOff;
   monBouton.callBackOn = maFonctionOn;
 
-  moteur_dc_setup(moteurDC, 5, 3, true);
+  moteur_dc_setup(moteurDC, 3, 4, true);
 
   i2c.setup();
 }
