@@ -1,5 +1,6 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <Servo.h>
 
 #include "onOffBouton.h"
 #include "dc.h"
@@ -10,6 +11,7 @@ I2c i2c(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
 
 OnOffBouton monBouton;
 MoteurDc moteurDC;
+Servo myservo;
 
 void setup() {
   Serial.begin(9600); 
@@ -19,6 +21,7 @@ void setup() {
   monBouton.callBackOn = maFonctionOn;
 
   moteur_dc_setup(moteurDC, 3, 4, true);
+  myservo.attach(9);
 
   i2c.setup();
 }
@@ -50,5 +53,6 @@ void maFonctionOff(void)
   moteur_dc_decelerate(moteurDC, 100);
   delay(100);
   moteur_dc_decelerate(moteurDC, 100);
+  myservo.write(90);
 }
 
