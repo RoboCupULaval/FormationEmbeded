@@ -5,6 +5,7 @@
 #include "onOffBouton.h"
 #include "dc.h"
 #include "i2c.h"
+#include "capteur.h"
 
 
 I2c i2c(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
@@ -12,6 +13,7 @@ I2c i2c(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);
 OnOffBouton monBouton;
 MoteurDc moteurDC;
 Servo myservo;
+Capteur cGauche, cDroit;
 
 void setup() {
   Serial.begin(9600); 
@@ -22,6 +24,9 @@ void setup() {
 
   moteur_dc_setup(moteurDC, 3, 4, true);
   myservo.attach(9);
+
+  capteur_setup(cGauche, A1, fonctionCapteurToAngleGauche);
+  capteur_setup(cDroit, A2, fonctionCapteurToAngleDroit);
 
   i2c.setup();
 }
@@ -41,7 +46,7 @@ void maFonctionOn(void)
   moteur_dc_accelerate(moteurDC, 100);
   delay(100);
   moteur_dc_accelerate(moteurDC, 100);
-  
+  myservo.write(capteur_get_data(cGauche) + capteur_get_data(cDroit));
 }
 
 void maFonctionOff(void)
@@ -53,6 +58,16 @@ void maFonctionOff(void)
   moteur_dc_decelerate(moteurDC, 100);
   delay(100);
   moteur_dc_decelerate(moteurDC, 100);
-  myservo.write(90);
 }
+
+float fonctionCapteurToAngleGauche(int data)
+{
+  return -13.64*data + 65.187;
+}
+
+float fonctionCapteurToAngleDroit(int data)
+{
+  return 13.64*data + 24.813;
+}
+
 
