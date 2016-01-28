@@ -32,7 +32,7 @@ void moteur_dc_decelerate(MoteurDc& moteur, unsigned int factor)
   }
   else
   {
-    moteur.currentSpeed -= factor; 
+    moteur.currentSpeed -= factor;  
   }
 }
 

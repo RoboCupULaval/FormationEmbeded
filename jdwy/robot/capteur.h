@@ -1,16 +1,16 @@
 #ifndef CAPTEUR_JDWY
 #define CAPTEUR_JDWY
 
-typedef float(*FonctionDeSortie)(int);
-
 typedef struct {
   short pin;
-   FonctionDeSortie fonctiondesortie;
+  int treshold; 
+  int angleDeSortieSurBlanc;
+  int angleDeSortieSurNoir;
 }Capteur;
 
-void capteur_setup(Capteur& capteur, short pin, FonctionDeSortie fds);
+void capteur_setup(Capteur& capteur, short pin, int angleDeSortieSurBlanc, int angleDeSortieSurNoir, int treshold);
 
-float capteur_get_data(Capteur& capteur);
+int capteur_get_angle(Capteur& capteur);
 
 #endif
 
