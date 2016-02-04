@@ -9,7 +9,7 @@ struct MoteurDc {
   unsigned int currentSpeed;
 };
 
-const int moteur_dc_max_speed = 1000;
+const int moteur_dc_max_speed = 100;
 const int moteur_dc_min_speed = 0;
 
 void moteur_dc_setup(MoteurDc& moteur, short pwm_pin, short dir_pin, bool dir);

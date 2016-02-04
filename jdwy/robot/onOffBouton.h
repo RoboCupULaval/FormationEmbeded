@@ -12,6 +12,7 @@ struct OnOffBouton {
   int pin;
   BoutonCallBack callBackOn;
   BoutonCallBack callBackOff;
+  unsigned long lastInput;
 };
 
 
